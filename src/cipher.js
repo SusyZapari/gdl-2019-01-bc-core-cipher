@@ -1,16 +1,26 @@
-function encriptar() {
-  var res = String.fromCharCode(65);
-  var input = "GASTRITIS";
-  var offset = 3;
-  var resultado = "";
-
-  for (var indice = 0; indice < input.length; indice++) {
-     var codigoDeLetra = input.charCodeAt(indice); // convertir letra en numero
-     var nuevoCodigoDeLetra = codigoDeLetra + offset; // sumarle el offset (moverlo n posiciones)
-     var letraApartirDeCodigo = String.fromCharCode(nuevoCodigoDeLetra); // convertir el numero en letra
-
-    resultado += letraApartirDeCodigo;
+  function encode (offset, diagnosis){
+    let fraseCodificada = "";
+    for(let indice = 0;indice < diagnosis.length;indice++){
+      let nuevoCodigoDeLetra = (diagnosis.charCodeAt(indice)-65+parseInt(offset))%26+65;
+      //let diferencia = 0;
+      nuevoCodigoDeLetra = diagnosis.charCodeAt(indice) - 65;
+      nuevoCodigoDeLetra = (nuevoCodigoDeLetra + offset)%26;
+      nuevoCodigoDeLetra = nuevoCodigoDeLetra + 65;
+    let letraApartirDeCodigo = String.fromCharCode(nuevoCodigoDeLetra);
+    fraseCodificada = fraseCodificada+letraApartirDeCodigo;
+    }
+    return fraseCodificada;
   }
 
-  document.getElementById("demo").innerHTML = resultado;
-}
+  function decode (offset, diagnosis) {
+    let fraseCodificada ="";
+    for(let indice = 0;indice < diagnosis.length;indice++){
+      //  let nuevoCodigoDeLetra =(diagnosis.charCodeAt(indice)+65-offset)%26+65;
+      let nuevoCodigoDeLetra = diagnosis.charCodeAt(indice) + 65;
+      nuevoCodigoDeLetra = (nuevoCodigoDeLetra - offset)%26;
+      nuevoCodigoDeLetra = nuevoCodigoDeLetra + 65;
+      let letraApartirDeCodigo = String.fromCharCode(nuevoCodigoDeLetra);
+      fraseCodificada = fraseCodificada + letraApartirDeCodigo;
+    }
+    return fraseCodificada;
+  }

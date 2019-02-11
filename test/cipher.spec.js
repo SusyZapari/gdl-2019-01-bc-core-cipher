@@ -21,16 +21,6 @@ describe('cipher', () => {
     // it('debería retornar " !@" para " !@"', () => {
     //   assert.equal(cipher.encode(33, ' !@'),' !@');
     // });
-
-    //
-    // Hacker edition
-    //
-    // Si decides implementar soporte para caracteres no alfabéticos descomenta
-    // el test a continuación.
-    //
-    // it('debería retornar " !@" para " !@"', () => {
-    //   assert.equal(cipher.encode(33, ' !@'),' !@');
-    // });
   });
 
   describe('cipher.decode', () => {

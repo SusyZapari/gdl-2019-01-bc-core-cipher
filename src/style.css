@@ -1,0 +1,9 @@
+#imagenDoctor, #imagenPaciente {
+  width:250px;
+  height:200px;
+}
+#seccionDoctor, #seccionPaciente {
+  display: none;
+}
+
+ /* Ocultar o visualizar las pantallas/*

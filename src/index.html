@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Dietrometro</a>
+  <a class="navbar-brand" href="#">CLINICA INTEGRAL</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,28 +23,85 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Selecciona una opcion
+          Selecciona una opción
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="doctor.html">Doctor</a>
-          <a class="dropdown-item" href="#">Paciente</a>
+        <a onClick = "return mostrarSeccionDoctor();" class="dropdown-item" href="#">Doctor</a>
+        <a onClick = "return mostrarSeccionPaciente();" class="dropdown-item" href="#">Paciente</a>
+
         </div>
       </li>
     </ul>
   </div>
 </nav>
-    <div id="root">
+    <div id = "root">
       <h1>BIENVENID@S</h1>
     </div>
-    <div class="jumbotron">
-      <div>
-        <img src="http://www.nicasalud.com/wp-content/uploads/2017/02/soluciones-medicas.jpg"
+    <div id = "seccionInicio" class="jumbotron">
+
+        <h4> Nuestra clínica te permitirá tener tu diagnostico
+          de una forma segura, confidencial desde la comodidad
+          de tus dispositivos móviles.
+        </h4>
+        <div>
+        <img src="http://www.nicasalud.com/wp-content/uploads/2017/02/soluciones-medicas.jpg" />
       </div>
     </div>
 
     <div class="alert alert-success" role="alert">
-  clinica de Oncologia
+  ¨La felicidad radica ante todo, en la salud; en tus manos está la prevención¨.
 </div>
+
+<!-- SEGUNDA PANTALLA A DEPLEGAR -->
+<div id = "seccionDoctor" class = "jumbotron">
+<h3>DOCTOR</h3>
+<div>
+  <img id = "imagenDoctor" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT03YY8Vm34y46ChI1dpykRGXUkNUYhPNdzQMFPWB75cw9RNGF"/>
+</div>
+<p>
+</p>
+
+<div id = "login" class="helveticaText">Cifrar Dx de Paciente:
+	<input type = "text" id="diagnosis"> <br><br>
+    </div>
+    <div id = "login" class="helveticaText">Clave única por paciente:
+    	<input type = "number" id="offset"> <br><br>
+    	<button id = "botonDoctorEncode">Enter</button>
+        </div>
+       <div class = "form-group">
+         <p>
+
+         </p>
+  <label for = "comment">El Diagnóstico del px cifrado es:</label>
+  <input id = "fraseCodificada"></input>
+</div>
+        </div>
+      </div>
+
+<!-- TERCER PANTALLA A DESPLEGAR -->
+<div id = "seccionPaciente" class="jumbotron">
+<h3>PACIENTE</h3>
+<div>
+  <img id = "imagenPaciente" src="https://fincasbox.es/img/pages/actuaciones.png"/>
+</div>
+<p>
+</p>
+
+<div id="login" class="helveticaText">Descifrar Diagnóstico:
+	<input type="text" id="diagnosticoPaciente"> <br><br>
+    </div>
+    <div id="login" class="helveticaText">Clave única del paciente:
+    	<input type="number" id="offsetPaciente"> <br><br>
+    	<button id="botonPacienteDecoded" >Enter</button>
+        </div>
+      <div class="form-group">
+        <p>
+
+        </p>
+      <label for="comment"> Tu Diagnóstico es:</label>
+      <input id = "fraseDecodificada"></input>
+      </div>
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
