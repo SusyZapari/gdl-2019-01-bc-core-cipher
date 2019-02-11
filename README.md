@@ -1,40 +1,16 @@
-#CLINICA INTEGRAL
+# CLINICA INTEGRAL
 
 ----
-##
 
-Con ayuda del Mock up se estructuró como quedarían las pantallas del proyecto
+## Qué es Clínica Integral?
 
+> Es una aplicación web creada para las necesidades del área de la salud, ya que ayuda a que interactúe de forma remota médico-paciente con la finalidad de que de forma confidencial se puedan enviar mensajes cifrados que sólo el paciente pueda abrir y con esto saber cual es su diagnóstico.
 
+----
+## Cómo se utiliza?
+1. El doctor entra a la página de inicio y se despliegan 3 inputs cifrar Dx del paciente, clave únicas por paciente y con ayuda del botón click te despliega el siguiente input con la palabra ya cifrada.
+2. El paciente entra a la página de inicio y se despliegan 3 inputs descifrar Dx del paciente, clave únicas por paciente y con ayuda del botón click te despliega el siguiente input con la palabra descifrada.
 
-
-
-
-
-
-
-
-### Definición del producto
-
-En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
-
-
-* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción a la aplicación, su funcionalidad y decisiones de
-  diseño que tomaron.
-
-
-### Parte Obligatoria
-
-* [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
-* [ ] `README.md` explica claramente quiénes son los usuarios y su relación con
-  el producto.
-* [ ] `README.md` explica claramente cómo el producto soluciona los
-  problemas/necesidades de los usuarios.
-* [ ] Usa VanillaJS.
+----
+**Definición del producto**
+La aplicación web fue pensada en la comodidad y practicidad de los usuarios pues tendrían el diagnostico pevio sin tener que estar el consultorio del doctor, pues desde su smartphone o algun dispositivo movil podra tener el diagnostico por paciente.
